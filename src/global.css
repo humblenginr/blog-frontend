@@ -28,6 +28,7 @@ body {
 .name {
   font-family: serif;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .align {
@@ -67,4 +68,30 @@ h2 {
   font-size: 1.8em;
   margin-bottom: 20px;
   margin-top: 20px;
+}
+
+h3 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  color: #535353;
+  font-size: 1.4em;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.highlight {
+ font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  color: #535353;
+  font-size: 1.4em;
+}
+
+.link {
+  opacity: 70%;
+  transition: all 100ms ease-in;
+  cursor: pointer;
+}
+
+.link:hover{
+  opacity: 100;
 }
