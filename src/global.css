@@ -115,12 +115,14 @@ h5 {
 
 ul {
   margin-left: 8px;
+  color: #444;
 }
 
 ul li{
  list-style-type: disc;
  list-style-position: inside;
  font-size: 1.2em;
+  color: #444;
 }
 
 .underline{
