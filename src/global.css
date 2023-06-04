@@ -22,7 +22,6 @@ body {
   line-height: inherit;
   background-color: #f8f8f8;
   font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 1em;
 }
 
 .name {
@@ -79,6 +78,24 @@ h3 {
   margin-top: 20px;
 }
 
+h4 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  color: #535353;
+  font-size: 1.3em;
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+
+h5 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  color: #535353;
+  font-size: 1em;
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+
 .highlight {
  font-family: 'Lato', sans-serif;
   font-weight: 700;
@@ -95,3 +112,26 @@ h3 {
 .link:hover{
   opacity: 100;
 }
+
+ul {
+  margin-left: 8px;
+}
+
+ul li{
+ list-style-type: disc;
+ list-style-position: inside;
+ font-size: 1.2em;
+}
+
+.underline{
+  text-decoration: underline;
+}
+
+.caption{
+  font-size: 1em;
+  color: rgba(0,0,0,0.5);
+  margin-bottom: 8px;
+}
+ .pointer {
+   cursor: pointer;
+ }
