@@ -7,6 +7,7 @@ import { DocumentHead } from '@builder.io/qwik-city';
 // all the directory names will be the id of the blogs
 const blogs = [
   // { year: 2023, items: [{ blog: "how-to-speak", month: "Mar 23" }, { blog: "dummy-blog", month: "Jun 11" }] },
+  { year: 2023, items: [{ blog: "why-blogging", month: "Aug 7" }] },
 ]
 
 const BlogEntry = component$<{ blog: string, month: string }>(({ blog, month }) => {
@@ -43,9 +44,6 @@ export default component$(() => {
       <h1>
         Blogs
       </h1>
-      <p>
-        No blogs as of now...
-      </p>
       {blogs.map(item => <>
         <h2> {item.year} </h2>
         {item.items.map(i => <BlogEntry blog={capitalize(i.blog.replaceAll("-", " "))} month={i.month} />)}
