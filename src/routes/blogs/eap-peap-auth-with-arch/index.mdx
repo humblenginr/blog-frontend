@@ -1,0 +1,40 @@
+---
+title: Authenticating to EAP-PEAP Wifi using nmcli (Linux) 
+description: A short goto note on how to connect to an EAP-PEAP wifi using nmcli in liux.
+---
+
+# Authenticating to EAP-PEAP Wifi using nmcli 
+
+This is not a detailed blog post about the EAP-PEAP authentication mechanism. This is a reference note that I use when I want to connect to an EAP-PEAP wifi network. 
+
+For an enterprise network configured with EAP-PEAP, the authentication process is different from the usual authentication mechanisms. To configure such a network using [nmcli](https://man.archlinux.org/man/nmcli.1.en),
+
+Step 1:
+Use nmcli to create a connection
+
+```
+nmcli con add type wifi ifname IFNAME con-name CONNECTION_NAME ssid SSID
+```
+
+- IFNAME should be your wifi interface name (It can be found using `ifconfig`)
+- CONNECTION_NAME can be anything
+
+Step 2:
+Edit the connection and configure it to authenticate using EAP-PEAP
+
+```
+nmcli con edit id CONNECTION_NAME
+nmcli> set 802-1x.eap peap
+nmcli> set 802-1x.phase2-auth mschapv2
+nmcli> set 802-1x.identity USERNAME
+nmcli> set 802-1x.password PASSWORD
+nmcli> set wifi-sec.key-mgmt wpa-eap
+nmcli> save
+nmcli> activate
+```
+
+
+
+References:
+1. https://www.reddit.com/r/archlinux/comments/pb3r0f/cannot_connect_to_college_wifi_using/
+2. https://askubuntu.com/questions/262491/connect-to-a-wpa2-enterprise-connection-via-cli-no-desktop
