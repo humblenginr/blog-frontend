@@ -7,7 +7,7 @@ import { DocumentHead } from '@builder.io/qwik-city';
 // all the directory names will be the id of the blogs
 const blogs = [
   // { year: 2023, items: [{ blog: "how-to-speak", month: "Mar 23" }, { blog: "dummy-blog", month: "Jun 11" }] },
-  { year: 2023, items: [{ blog: "why-blogging", month: "Aug 7" }, { blog: "eap-peap-auth-with-arch", month: "Aug 22" }] },
+  { year: 2023, items: [{ blog: "eap-peap-authentication-with-nmcli", month: "Aug 22" }, { blog: "why-blogging", month: "Aug 7" }] },
 ]
 
 const BlogEntry = component$<{ blog: string, month: string }>(({ blog, month }) => {
